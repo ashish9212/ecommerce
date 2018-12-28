@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+
 
 <%
 	CartDAO cdao = new CartDAOImpl();
@@ -32,59 +32,64 @@
 	request.setAttribute("list", cdao.getCart(request.getSession().getAttribute("username").toString()));
 %>
 </head>
-<body style="margin: auto; width: 80%;">
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:170%; font-style:italic;"><b>
 	<h1>${errorMap}</h1>
 	<c:import url="header.jsp"></c:import>
 
-	<h1>Your Invoice</h1>
+	<h1 style="text-align:center; font-size: 30px; font-weight: bold;">Your Invoice</h1>
 
 
-	<a href="Thankyou.jsp" class="btn btn-primary" style="floot: right;">Confirm
-		Order</a>
+	<a href="Thankyou.jsp" class="btn btn-primary" style="floot: right;"><h2>Confirm
+		Order</h2></a>
 	<br>
 	
-	<hr>
+	<br>
 	
-	<h2> Grand Total: Rs. ${total}</h2>
-	
-	<hr>
-	
-
-	<div class="jumbotron">
-
-		<h3>Shipping Address</h3>
-
-		<hr>
-
-		<p style="font-size: 22px; font-weight: bold;">${sa}</p>
-
-	</div>
-	
-	<div class="jumbotron">
-
-		<h3>Billing Address</h3>
-
-		<hr>
-		
-		<p style="font-size: 22px; font-weight: bold;">${ba}</p>
-
-	</div>
-
+	<h2 style="text-align:center;  font-size: 30px; font-weight: bold;"> Grand Total: Rs. ${total}</h2>
 	
 	<br>
+	
+</div>
+	
 
-	<table class="table table-striped">
+<table class="table table-striped" style="margin: auto; width: 80%; font-size: 18px; ">
 
 		<thead>
 
 			<tr>
 
-				<td>Product Name</td>
-				<td>Product Image</td>
+				<td>Shipping Address</td>
+				<td>Billing Address</td>
+				
+
+			</tr>
+
+		</thead>
+		<tbody>
+
+
+			<tr>
+				<td>${sa}</td>
+				<td>${ba}</td>
+				
+			</tr>
+
+	</tbody>
+	</table>
+	<br><br>
+	<table class="table table-striped" style="margin: auto; padding:50; width: 80%; font-size: 18px; font-weight: bold;">
+
+		<thead>
+
+			<tr>
+
+				<td> Product Name </td>
+				<td> Product Image</td>
 				<td>Product Price</td>
 				<td>Quantity</td>
 				<td>Sub Total</td>
-
+				
 			</tr>
 
 		</thead>
@@ -110,6 +115,7 @@
 		</tbody>
 
 	</table>
-
+</b>
+</div>
 </body>
 </html>

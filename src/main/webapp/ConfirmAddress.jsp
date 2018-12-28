@@ -24,7 +24,8 @@
 			cdao.getBillingAddress(request.getSession().getAttribute("username").toString()));
 %>
 </head>
-<body>
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:170%; font-style:italic;"><b>
 	<c:import url="header.jsp"></c:import>
 
 	<table class="table table-striped" style="margin: auto; width: 80%;">
@@ -54,7 +55,7 @@
 
 					<td><textarea name="sa" class="form-control">${sa}</textarea></td>
 					<td><textarea name="ba" class="form-control">${ba}</textarea></td>
-					<td><button type="submit" class="btn btn-danger">Update</button></td>
+					<td><button type="submit" class="btn btn-danger"><h3>Update</h3></button></td>
 
 				</form>
 
@@ -63,6 +64,8 @@
 
 		</tbody>
 	</table>
-	<a href="Invoice.jsp" class="btn btn-warning" style="margin-left: 50px;"> View Invoice</a>
-</body>
+	<a href="Invoice.jsp" class="btn btn-warning" style="margin-left: 100px;;" ><h3> View Invoice</h3></a>
+	</b>
+	</div>
+	</body>
 </html>

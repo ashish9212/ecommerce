@@ -19,9 +19,10 @@
 %>
 
 </head>
-<body>
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
 
 	<c:import url="header.jsp"></c:import>
+	<div  class="text-lowercase" style="font-size:170%; font-style:italic;">
 
 	<table class="table table-striped">
 
@@ -48,7 +49,7 @@
 
 		</thead>
 
-		<tbody>
+		<tbody >
 
 			<c:forEach items="${products}" var="x">
 
@@ -64,12 +65,12 @@
 			
 				<c:if test="${not empty sessionScope.username and sessionScope.usernameRole=='ROLE_ADMIN'}">
 					<td><a href="UpdateProduct.jsp?id=${x.getId()}"
-						class="btn btn-success">Update</a></td>
+						class="btn btn-success"><h3>Update</h3></a></td>
 					<td><a href="DeleteProductFromDB?id=${x.getId()}"
-						class="btn btn-danger">Delete</a></td>
+						class="btn btn-danger"><h3>Delete</h3></a></td>
 							</c:if>
 						<td><a href="ViewSingleProduct.jsp?id=${x.getId()}"
-						class="btn btn-danger">View</a></td>
+						class="btn btn-danger"><h3>View</h3></a></td>
 				
 				</tr>
 
@@ -79,6 +80,7 @@
 		</tbody>
 
 	</table>
-
+	
+</div>
 </body>
 </html>

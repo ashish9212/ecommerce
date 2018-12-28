@@ -19,10 +19,10 @@
 %>
 
 </head>
-<body>
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
 
 	<c:import url="header.jsp"></c:import>
-
+<div  class="text-lowercase" style="font-size:150%; font-style:italic;">
 	<br>
 
 	<table style="margin:auto; width: 80%;">
@@ -42,14 +42,14 @@
 						<div class="row">
 						
 							<div class="col-lg-3"><b>Name:</b></div>
-							<div class="col-lg-3">${product.getName()}</div>
+							<div class="col-lg-5" ><h3>${product.getName()}</h3></div>
 						
 						</div><br>
 						
 						<div class="row">
 						
 							<div class="col-lg-3"><b>Description:</b></div>
-							<div class="col-lg-3">${product.getDescription()}</div>
+							<div class="col-lg-6" ><h3>${product.getDescription()}</h3></div>
 						
 						</div>
 					
@@ -68,13 +68,13 @@
 		<input type="hidden" name="pid" value="${product.getId()}">
 		<input type="hidden" name="username" value="${sessionScope.username}">
 
-		<input type="number" name="qty" placeholder="Enter Quantity" class="form-control">
+		<input type="number" name="qty" placeholder="Enter Quantity" style="font-size:90%; font-style:italic;" class="form-control">
 		<br>
-		<input type="text"  disabled="disabled" value="${sessionScope.username}" class="form-control">
+		<input type="text"  disabled="disabled" value="${sessionScope.username}" style="font-size:90%; font-style:italic;" class="form-control">
 		<br>
-		<input type="submit" value="Add To Cart" class="btn btn-danger">
+		<input type="submit" value="Add To Cart" style="font-size:90%; font-style:italic;" class="btn btn-danger">
 	
  	</form>
-
+</div>
 </body>
 </html>

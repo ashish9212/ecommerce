@@ -16,39 +16,39 @@
 %>
 
 </head>
-<body>
-
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:150%; font-style:italic;">
 	<c:import url="header.jsp"></c:import>
 
-	<h1>Add Product</h1>
+	<h1 style="text-align:center">Add Product</h1>
+<br>
+	<form action="AddProductToDB" method="post" style="margin: auto; width: 50%;" >
 
-	<form action="AddProductToDB" method="post" enctype="multipart/form-data">
-
-		<input type="text" name="name" placeholder="enter SubCategory"  class="form-control">
+		<input type="text" name="name" placeholder="enter SubCategory"  class="form-control" style="font-size:110%; font-style:italic;" >
 		<br>
 		
-		<select class="form-control" name="category">
+		<select style="font-size:110%; font-style:italic;" class="form-control" name="category">
 			<c:forEach items="${cats}" var="cat">
 				<option value="${cat.getName()}" title="${cat.getDescription()}">${cat.getName()}</option>			
 			</c:forEach>
 		</select>
 		
-		<!-- <input type="text" name="category" placeholder="enter category"  class="form-control"> -->
+		<!-- <input style="font-size:70%; font-style:italic;" type="text" name="category" placeholder="enter category"  class="form-control"> -->
 		<br>
-		<input type="text" name="quantity"  placeholder="enter quantity " class="form-control">
+		<input style="font-size:110%; font-style:italic;" type="text" name="quantity"  placeholder="enter quantity " class="form-control">
 		<br>
-		<input type="text" name="price"  placeholder="enter price"class="form-control">
+		<input style="font-size:110%; font-style:italic;" type="text" name="price"  placeholder="enter price"class="form-control">
 		<br>
-		<textarea name="description" placeholder="enter description" class="form-control"></textarea>
-		<br>
-		
-		<input type="file" name="file" class="form-control">
+		<textarea style="font-size:110%; font-style:italic;" name="description" placeholder="enter description" class="form-control"></textarea>
 		<br>
 		
-		<input type="submit" value="Submit" class="btn btn-success">
+		<input style="font-size:110%; font-style:italic;" type="file" name="file" class="form-control">
+		<br>
+		
+		<input style="font-size:110%; font-style:italic;" type="submit" value="Submit" class="btn btn-success">
 
 	</form>
 
-
+</div>
 </body>
 </html>

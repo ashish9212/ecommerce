@@ -19,8 +19,8 @@
 %>
 
 </head>
-<body>
-
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:170%; font-style:italic;">
 	<c:import url="header.jsp"></c:import>
 
 	<table class="table table-striped">
@@ -63,6 +63,6 @@
 		</tbody>
 
 	</table>
-
+</div>
 </body>
 </html>

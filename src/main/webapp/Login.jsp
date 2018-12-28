@@ -11,21 +11,21 @@
 	
 	
 	</head>
-	<body background="assets/images/bgimage.jpg">
-	
+	<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+	<div  class="text-lowercase" style="font-size:170%; font-style:italic;"><b>
 		<c:import url="header.jsp"></c:import>
 	
-		<h1>Login</h1>
+		<h1 style="text-align:center">Login</h1><br>
 	<h1>${errorMap}</h1>
 		
-		<form action="Login" method="post">
+		<form action="Login" method="post" style=" margin: auto; width: 40%; font-size:180%; font-style:italic;">
 	
-			<input type="text" name="Username" class="form-control" placeholder="Enter Username">
+			<input  style="font-size:50%; font-style:italic;" type="text" name="Username" class="form-control" placeholder="Enter Username">
 			
 			<br>
-			<input type="password" name="Password"  class="form-control" placeholder="Enter Password"/>
+			<input style="font-size:50%; font-style:italic;" type="password" name="Password"  class="form-control" placeholder="Enter Password"/>
 			<br>
-			<input type="submit" value="Submit" class="btn btn-danger">
+			<p style="text-align:center"><input style="font-size:60%; font-style:italic;" type="submit" value="Submit" class="btn btn-danger"></p>
 	
 			<c:if test="${not empty invalid}">
 			
@@ -36,6 +36,7 @@
 	
 		</form>
 	
-	
+	</b>
+	</div>
 	</body>
 	</html>

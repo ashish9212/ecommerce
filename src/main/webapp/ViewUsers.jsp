@@ -18,8 +18,8 @@
 %>
 
 </head>
-<body>
-
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:150%; font-style:italic;">
 	<c:import url="header.jsp"></c:import>
 
 	<table class="table table-striped">
@@ -50,7 +50,7 @@
 					<td>${x.getPhoneno()}</td>
 					<td>${x.getAddress()}</td>
 					<td><a href="DeleteUsersFromDB?id=${x.getId()}"
-						class="btn btn-danger">Delete</a></td>
+						class="btn btn-danger"><h4>Delete</h4></a></td>
 
 				</tr>
 
@@ -60,6 +60,8 @@
 		</tbody>
 
 	</table>
-
-</body>
-</html>
+	</div>
+	</body>
+	</html>
+	
+	

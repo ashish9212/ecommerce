@@ -17,12 +17,12 @@
 	cdao.delete( request.getSession().getAttribute("username").toString() );	
 %>
 </head>
-<body>
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
 	<c:import url="header.jsp"></c:import>
 
-	<center><h4> Thankyou. Your order has been confirmed.</h4></center>
+	<center><h1> Thankyou. Your order has been confirmed.</h1></center>
 	
-	<a href="ViewProduct.jsp" class="btn btn-warning" style="margin-left: 50px;">Back To Products</a>
+	<a href="ViewProduct.jsp" class="btn btn-warning" style="margin-left: 50px;"><h3>Back To Products</h3></a>
 	
 </body>
 </html>

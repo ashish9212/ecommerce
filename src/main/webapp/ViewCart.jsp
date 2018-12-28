@@ -19,17 +19,19 @@
 %>
 				
 </head>
-<body>
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+
+<div  class="text-lowercase" style="font-size:170%; font-style:italic;"><b>
 	<h1>${errorMap}</h1>
 	<c:import url="header.jsp"></c:import>
 
-	<h1>View Cart</h1>
-	<a href="ConfirmAddress.jsp" class="btn btn-primary"
-		style="float: right;">ConfirmAddressss</a>
+	<h1 style="text-align:center"><b>View Cart</b></h1>
+	
+	
 	<br>
 	<br>
 
-	<table class="table table-striped">
+	<table class="table table-striped" style=" margin: auto; width: 80%; font-size:110%; font-style:italic;">
 
 		<thead>
 
@@ -40,6 +42,7 @@
 				<td>Product Price</td>
 				<td>Quantity</td>
 				<td>Delete</td>
+				<td>Confirm</td>
 
 			</tr>
 
@@ -57,16 +60,19 @@
 					<td>${x.getQ()}</td>
 
 					<td><a href="DeleteCartFromDB?id=${x.getId()}"
-						class="btn btn-danger"> delete</a></td>
+						class="btn btn-danger"><h3>delete</h3></a></td>
+						<td><a href="ConfirmAddress.jsp" class="btn btn-primary" style="float: right;">
+						<h3 >Confirm Addressss</h3></a></td>
+					
 
 				</tr>
 
 			</c:forEach>
-
+	
 
 		</tbody>
 
-	</table>
-
+	</table></b>
+</div>
 </body>
 </html>

@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -55,7 +56,7 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 <span class="navbar-logo"><a href="Index.jsp">
-                   <h3> <font color="white"><b>Hunger Point</b></font> </h3>
+                   <h1> <font color="white"><b>Hunger Point</b></font> </h1>
                    </a>
                 </span>
                 
@@ -67,35 +68,35 @@
         
 		<c:if
 			test="${not empty sessionScope.username and sessionScope.usernameRole=='ROLE_ADMIN'}">
-			<li class=" nav-item"><a class="nav-link link text-white display-4" href="AddProduct.jsp">Add
-					Product</a></li>
+			<li class=" nav-item"><a class="nav-link link text-white display-4" href="AddProduct.jsp"><h4>Add
+					Product</h4></a></li>
 		</c:if>
 
-		<li class="nav-item"><a class="nav-link link text-white display-4" href="ViewProduct.jsp">Food</a></li>
+		<li class="nav-item"><a class="nav-link link text-white display-4" href="ViewProduct.jsp"><h4>View Food</h4></a></li>
 		
 		<c:if
 			test="${not empty sessionScope.username and sessionScope.usernameRole=='ROLE_ADMIN'}">
-			<li class="nav-item"><a class="nav-link link text-white display-4" href="AddCategory.jsp">Add
-					Category</a></li>
+			<li class="nav-item"><a class="nav-link link text-white display-4" href="AddCategory.jsp"><h4>Add
+					Category</h4></a></li>
 		</c:if>
 
 		
 		<c:if
 			test="${not empty sessionScope.username and sessionScope.usernameRole=='ROLE_ADMIN'}">
 		<li class="nav-item"><a class="nav-link link text-white display-4"
-			href="ViewCategories.jsp">View Category</a></li>
+			href="ViewCategories.jsp"><h4>View Category</h4></a></li>
 		</c:if>
 
 
 		<c:if
 			test="${not empty sessionScope.username and sessionScope.usernameRole=='ROLE_ADMIN'}">
-			<li class="nav-item"><a class="nav-link link text-white display-4" href="ViewUsers.jsp">View
-					Users</a></li>
+			<li class="nav-item"><a class="nav-link link text-white display-4" href="ViewUsers.jsp"><h4>View
+					Users</h4></a></li>
 		</c:if>
 	
 		<li class="nav-item">
-		<a class="nav-link link text-white display-4" href="ViewCart.jsp">
-				Cart ${itemcount} </a></li>
+		<a class="nav-link link text-white display-4" href="ViewCart.jsp"><h4>
+				Cart ${itemcount} </h4></a></li>
 	
 				
 	</ul>
@@ -105,11 +106,11 @@
 
 			<li class="nav-item">
 			<a class="nav-link link text-white display-4" href="AddCategory.jsp"><span class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>
-			Welcome ${sessionScope.username} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
+			<h4>Welcome ${sessionScope.username}</h4> </a></li>
 					
 			<li class="nav-item">
 			<a class="nav-link link text-white display-4" href="Logout"><span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                        LOG OUT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                       <h4> LOG OUT</h4> </a>
 			</li>
 
 		</c:if>
@@ -117,12 +118,13 @@
 
 		<c:if test="${empty sessionScope.username}">
 		
-			<li class="nav-item"><a class="nav-link link text-white display-4" href="Login.jsp">Login</a></li>
+			<li class="nav-item"><a class="nav-link link text-white display-4" href="Login.jsp"><h4>Login</h4>
+			 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
 	
 	
 			<li class="nav-item">
 			<a class="nav-link link text-white display-4" href="AddUsers.jsp"><span class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>
-                        SIGN UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                       <h4>SIGN UP</h4> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
 			</li>
 			
 		</c:if>

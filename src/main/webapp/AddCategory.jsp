@@ -11,22 +11,22 @@
 
 
 </head>
-<body>
-
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:170%; font-style:italic;">
 	<c:import url="header.jsp"></c:import>
 
-	<h1>Add Category</h1>
+	<h1 style="text-align:center">Add Category</h1>
 
-	<form action="AddCategoryToDB" method="post">
+	<form action="AddCategoryToDB" method="post" style="margin: auto; width: 50%;">
 
-		<input type="text" name="name" placeholder="enter Category" class="form-control"> <br>
+		<h1><input  style="font-size:70%; font-style:italic;" type="text" name="name" placeholder="enter Category" class="form-control"></h1> <br>
 
-		<textarea name="description" placeholder="enter Category Description" class="form-control"></textarea>
-
-		<br> <input type="submit" value="Submit" class="btn btn-success">
+		<h2><textarea style="font-size:70%; font-style:italic;" name="description" placeholder="enter Category Description" class="form-control"></textarea></
+			</h2><br>
+		<br> <p style="text-align:center"><b><input style="font-size:70%; font-style:italic;"  type="submit" value="Submit" class="btn btn-success"></b></p>
 
 	</form>
 
-
+</div>
 </body>
 </html>

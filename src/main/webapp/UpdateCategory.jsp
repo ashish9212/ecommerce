@@ -21,22 +21,23 @@
 </head>
 
 <c:import url="header.jsp"></c:import>
-<body style="margin: auto; width: 80%;">
+<body style="margin: auto; width: 90%;" background="assets/images/52476.jpg">
+<div  class="text-lowercase" style="font-size:170%; font-style:italic;">
+	<h1 style="text-align:center">Update Category</h1>
+<br>
+	<form action="UpdateCategoryToDB" method="post" style="margin: auto; width: 50%;">
 
-	<h1>Update Category</h1>
-
-	<form action="UpdateCategoryToDB" method="post">
-
-		<input type="hidden" name="id" value="${cat.getId()}"> <input type="text" name="name" placeholder="Enter Name" class="form-control"
+		<input  type="hidden" name="id" value="${cat.getId()}"> 
+		<input style="font-size:80%; font-style:italic;" type="text" name="name" placeholder="Enter Name" class="form-control"
 			<c:if test="${not empty cat}"> value="${cat.getName()}" </c:if> /> <br>
 
-		<textarea name="description" placeholder="Enter Description" class="form-control">
+		<textarea style="font-size:80%; font-style:italic;" type="text"  name="description" placeholder="Enter Description" class="form-control">
 		<c:if test="${not empty cat}">${cat.getDescription()}</c:if></textarea>
 
-		<br> <input type="submit" value="Submit" class="btn btn-success">
+		<br> <p style="text-align:center"><input type="submit" value="Submit" class="btn btn-success"></p>
 
 	</form>
-
+</div>
 
 </body>
 </html>
